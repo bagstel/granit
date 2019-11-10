@@ -1,0 +1,44 @@
+.logo {
+  display: flex;
+  color: $text_color_dark;
+
+  &__icon {
+    width: 38px;
+    height: 40px;
+    background-image: svg-load('logo.svg', fill=$text_color_dark, width=100%, height=100%);
+  }
+
+  &__column:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  &__company {
+    color: currentColor;
+    font-size: $subtitle_font_size;
+    font-weight: $title_font_weight;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__slogan {
+    color: $subtext_color;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+}
+
+.footer {
+  .logo {
+    color: $text_color;
+
+    &__icon {
+      background-image: svg-load('logo.svg', fill=$text_color, width=100%, height=100%);
+    }
+
+    &__slogan {
+      color: $text_color;
+    }
+  }
+}

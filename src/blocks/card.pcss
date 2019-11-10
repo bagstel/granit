@@ -1,0 +1,114 @@
+.card {
+  padding: 38px 20px;
+  text-align: center;
+  border: 2px solid #f6f6f6;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    img {
+      margin: 0 auto
+    }
+  }
+
+  &__offer {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    padding: 5px 10px;
+    color: $text_color;
+    background: $stock_color;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    color: $text_color_dark;
+    font-family: $font_family;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 19px;
+  }
+
+  &__text {
+    color: $text_color_dark;
+    font-family: $font_family;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-old {
+      color: $subtext_color;
+      font-size: 10px;
+      font-weight: 400;
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+
+    &-new {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.card--inverse {
+  border: 2px solid $text_color;
+
+  .card__content {
+    margin-bottom: 0;
+  }
+
+  .card__text {
+    margin-bottom: 0;
+  }
+}
+
+.card--goods {
+  padding: 15px;
+
+  &__header {
+    margin: 0 0 20px 0;
+  }
+}
+
+.card--advantages {
+  transition: background-color .3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $text_color;
+    box-shadow: 0 9px 21px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.card--services {
+  .card__header {
+    display: flex;
+    min-height: 127px;
+  }
+
+  .card__title {
+    margin-bottom: 0;
+  }
+}
+
+.card--offer {
+  .card__price-new {
+    color: $stock_color;
+  }
+}

@@ -6,10 +6,15 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Granit
   body
-    .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+    .wrapper(style="background-color: #fff")
+      include ./blocks/sections/header/header
+      include ./blocks/components/nav/nav
+      include ./blocks/sections/hero/hero
+      include ./blocks/sections/stock/stock
+      include ./blocks/sections/advantages/advantages
+      include ./blocks/sections/goods/goods
+      include ./blocks/sections/services/services
+      include ./blocks/sections/map/map
+      include ./blocks/sections/footer/footer

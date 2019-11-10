@@ -1,0 +1,16 @@
+.products {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex-basis: calc(100% / 3 - (40px / 3));
+  }
+}
+
+.products--goods {
+  .products__item {
+    flex-basis: calc(100% / 4 - (60px / 4));
+  }
+}

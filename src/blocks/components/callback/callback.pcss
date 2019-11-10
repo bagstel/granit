@@ -1,0 +1,56 @@
+.callback {
+  display: flex;
+  align-items: center;
+  color: $text_color_dark;
+
+  &__column:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+
+  &__phone {
+    align-self: flex-end;
+  }
+
+  &__link {
+    display: inline-block;
+    color: currentColor;
+    font-family: $font_family;
+    font-size: 18px;
+    font-weight: $title_font_weight;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__subtitle {
+    color: $subtext_color;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
+
+.footer {
+  .callback {
+    align-items: flex-end;
+    color: $text_color;
+    flex-direction: column;
+
+    &__column:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      color: $text_color;
+    }
+  }
+
+  .btn {
+    color: $text_color;
+  }
+}
+
+

@@ -1,0 +1,18 @@
+- var items = ['Песок речной', 'Щебень', 'Грунт']
+section.stock
+  .container
+    .subtitle.stock__title Всегда в наличии
+    .stock__content
+      ul.products__list
+        each title, i in items
+          li.products__item
+            .card
+              .card__header
+                img(src= require(`images/content/goods_${i + 1}.jpg`))
+              .card__content
+                .card__title !{ title }
+                .card__text
+                  p Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав которых он входит.
+                .card__price от 330 р./т
+              .card__footer
+                button(type="button").btn.btn--with-bg Подробнее

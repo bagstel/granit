@@ -1,0 +1,6 @@
+nav.nav
+  .container
+    ul.nav__list
+      each text in ["Главная", "Каталог", "Услуги", "Доставка", "О компании", "Контакты"]
+        li.nav__item
+          a(href="#").nav__link !{ text }

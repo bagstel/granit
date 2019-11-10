@@ -1,0 +1,22 @@
+- var items = ["Гранитный щебень 5-20 мм", "Гранитный щебень 5-20 мм", "Гранитный щебень 0-5 мм (отсев)", "Гранитный щебень 5-20 мм"];
+section.goods
+  .container
+    .subtitle.goods__title Популярные товары
+    .goods__content
+      ul.products__list.products--goods
+        each item, i in items
+          li.products__item
+            div(class=`${ i < 2 ? 'card--offer' : '' }`).card.card--goods
+              figure.card__header
+                img(src= require(`images/content/popular_goods_${i + 1}.jpg`))
+                if i < 2
+                  figcaption.card__offer АКЦИЯ
+              .card__content
+                .card__title
+                .card__text !{ item }
+                .card__price
+                  if i < 2
+                    .card__price-old 1 500 р./т
+                  .card__price-new 1 350 р./т
+              .card__footer
+                button(type="button").btn.btn--with-bg Купить
