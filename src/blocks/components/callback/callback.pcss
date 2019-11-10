@@ -53,4 +53,27 @@
   }
 }
 
+@media screen and (max-width: 680px) {
+  .callback {
+    &__column:nth-child(1) {
+      display: none;
+    }
+  }
+
+  .footer {
+    .callback {
+      &__column {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .callback {
+    &__column:nth-child(2) {
+      display: none;
+    }
+  }
+}
 
