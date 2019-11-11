@@ -6,17 +6,17 @@
     'Весь товар уже находится на нашем складе. Нам остается только погрузить его и в путь!',
     'Вам нужны бесперебойные поставки или большая партия товара со скидкой? Мы найдем решение!'
   ]
-section.advantages
+section.advantages#advantages
   .container
-    .subtitle.advantages__title Наши преимущества
+    h2.subtitle.advantages__title Наши преимущества
     .advantages__content
       ul.products__list
         each title, i in items
           li.products__item
             .card.card--inverse.card--advantages
               .card__header
-                img(src= require(`images/content/advantages_${i + 1}.png`))
+                div(class=`advantages-${i+1}`).advantages__image
               .card__content
-                .card__title !{ title }
+                h3.card__title !{ title }
                 .card__text
                   p !{ texts[i] }

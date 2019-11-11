@@ -1,13 +1,13 @@
 - var items = ['Аренда самосвала', 'Аренда спецтехники ', 'Рытье траншеи']
-section.services
+section.services#services
   .container
-    .subtitle.services__title Наши услуги
+    h2.subtitle.services__title Наши услуги
     .services_content
       ul.products__list
         each title, i in items
           li.products__item
             .card.card--inverse.card--services
               .card__header
-                img(src= require(`images/content/services_${ i + 1 }.png`))
+                img(src= require(`images/content/services_${ i + 1 }.png`), alt=`services image ${title}`)
               .card__content
-                .card__title !{ title }
+                h3.card__title !{ title }

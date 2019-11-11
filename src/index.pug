@@ -1,20 +1,23 @@
 include ./mixins.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
+    meta(name="yandex-verification" content="74bd6314906b4b22")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="icon" href=require('images/content/favicon.png'))
     title Granit
   body
-    .wrapper(style="background-color: #fff")
+    .wrapper#home
       include ./blocks/sections/header/header
       include ./blocks/components/nav/nav
       include ./blocks/sections/hero/hero
-      include ./blocks/sections/stock/stock
-      include ./blocks/sections/advantages/advantages
-      include ./blocks/sections/goods/goods
-      include ./blocks/sections/services/services
+      main.main
+        include ./blocks/sections/stock/stock
+        include ./blocks/sections/advantages/advantages
+        include ./blocks/sections/goods/goods
+        include ./blocks/sections/services/services
       include ./blocks/sections/map/map
       include ./blocks/sections/footer/footer

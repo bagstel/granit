@@ -1,6 +1,16 @@
+-
+  var items = [
+    { href: "#home", text: "Главная" },
+    { href: '#', text: "Каталог" },
+    { href: '#services', text: "Услуги" },
+    { href: '#', text: "Доставка" },
+    { href: '#', text: "О компании" },
+    { href: '#contacts', text: "Контакты" }
+  ]
 nav.nav
   .container
+    h2 Главное меню
     ul.nav__list
-      each text in ["Главная", "Каталог", "Услуги", "Доставка", "О компании", "Контакты"]
+      each item in items
         li.nav__item
-          a(href="#").nav__link !{ text }
+          a(href=item.href).nav__link !{ item.text }
